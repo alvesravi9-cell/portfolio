@@ -242,6 +242,13 @@ ul {
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
+.avatar-circular img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 /* ==========================================
    Seção Sobre Mim
    ================================---------- */
