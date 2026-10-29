@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kauã Ravi | Portfólio Front-End</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho principal -->
+    <header class="cabecalho">
+        <div class="container cabecalho-container">
+            <a href="#inicio" class="logotipo">Kauã Ravi.</a>
+            
+            <button class="menu-hamburguer" aria-label="Abrir menu de navegação" aria-expanded="false">
+                <span class="linha-hamburguer"></span>
+                <span class="linha-hamburguer"></span>
+                <span class="linha-hamburguer"></span>
+            </button>
+
+            <nav class="navegacao">
+                <ul class="lista-nav">
+                    <li><a href="#inicio" class="link-nav">Início</a></li>
+                    <li><a href="#sobre" class="link-nav">Sobre mim</a></li>
+                    <li><a href="#habilidades" class="link-nav">Habilidades</a></li>
+                    <li><a href="#projetos" class="link-nav">Projetos</a></li>
+                    <li><a href="#contato" class="link-nav">Contato</a></li>
+                </ul>
+            </nav>
+
+            <button id="botao-tema" class="botao-tema" aria-label="Alternar entre tema claro e escuro">
+                🌓
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Apresentação inicial (Full Height, sem saudação dinâmica) -->
+        <section id="inicio" class="secao-inicio">
+            <div class="container inicio-container">
+                <div class="inicio-texto">
+                    <h1 class="titulo-principal">Oi, eu sou Kauã Ravi.</h1>
+                    <p class="subtitulo-principal">Estudante de Desenvolvimento de Sistemas e futuro desenvolvedor front-end.</p>
+                    <a href="#projetos" class="botao-primario">Conheça meus projetos</a>
+                </div>
+
+                <div class="inicio-avatar">
+                    <div class="avatar-circular">
+                        <img src="../ravi%20.jpeg" alt="Foto de Kauã Ravi">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre mim -->
+        <section id="sobre" class="secao-sobre">
+            <div class="container">
+                <h2 class="titulo-secao">Sobre mim</h2>
+                
+                <div class="sobre-wrapper">
+                    <div class="sobre-conteudo">
+                        <p>
+                            Sou estudante do curso Técnico em Desenvolvimento de Sistemas no SENAC MedTec e estou construindo minha trajetória na área de tecnologia. Escolhi esse caminho por ter interesse em programação, criação de sites e desenvolvimento de soluções digitais. Durante o curso, venho aprendendo a transformar ideias em projetos, utilizando tecnologias como HTML, CSS e JavaScript.
+                        </p>
+                        <p>
+                            Meu objetivo é conquistar uma oportunidade de estágio na área de desenvolvimento front-end, onde eu possa aplicar meus conhecimentos, aprender com profissionais experientes e contribuir para a criação de soluções digitais criativas, acessíveis e funcionais.
+                        </p>
+                    </div>
+
+                    <!-- Espaço reservado para foto de perfil -->
+                    <div class="sobre-imagem-container">
+                        <img src="../ravi%20.jpeg" alt="Foto de Kauã Ravi" class="sobre-imagem" onerror="this.onerror=null; this.parentNode.classList.add('placeholder-ativo');">
+                        <div class="sobre-imagem-placeholder">
+                            <span>Sua Foto Aqui</span>
+                            <small>(Adicione foto-perfil.jpg na pasta img)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Minhas Habilidades -->
+        <section id="habilidades" class="secao-habilidades">
+            <div class="container">
+                <h2 class="titulo-secao">Minhas habilidades</h2>
+                <p class="descricao-secao">Conhecimentos fundamentais que venho praticando e aprimorando no curso:</p>
+
+                <div class="grade-habilidades">
+                    <article class="cartao-habilidade">
+                        <div class="icone-habilidade" aria-hidden="true">&lt;/&gt;</div>
+                        <h3>HTML5</h3>
+                        <p>Estruturação de páginas web com marcas semânticas, organizando o conteúdo de forma limpa e acessível.</p>
+                    </article>
+
+                    <article class="cartao-habilidade">
+                        <div class="icone-habilidade" aria-hidden="true">{ }</div>
+                        <h3>CSS3</h3>
+                        <p>Estilização visual, construção de layouts responsivos com Flexbox e Grid, além de uso de variáveis e temas.</p>
+                    </article>
+
+                    <article class="cartao-habilidade">
+                        <div class="icone-habilidade" aria-hidden="true">( )</div>
+                        <h3>JavaScript</h3>
+                        <p>Lógica de programação, manipulação do DOM e criação de interatividades para enriquecer a navegação.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meus Projetos -->
+        <section id="projetos" class="secao-projetos">
+            <div class="container">
+                <h2 class="titulo-secao">Meus projetos</h2>
+                <p class="descricao-secao">Alguns exemplos de trabalhos e aplicações que desenvolvi durante o aprendizado.</p>
+
+                <!-- Filtros por tecnologia -->
+                <div class="filtros-projetos" role="group" aria-label="Filtrar projetos por tecnologia">
+                    <button class="botao-filtro ativo" data-filtro="todos">Todos</button>
+                    <button class="botao-filtro" data-filtro="HTML">HTML</button>
+                    <button class="botao-filtro" data-filtro="CSS">CSS</button>
+                    <button class="botao-filtro" data-filtro="JavaScript">JavaScript</button>
+                </div>
+
+                <!-- Lista de projetos renderizada dinamicamente -->
+                <div id="grade-projetos" class="grade-projetos"></div>
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contato" class="secao-contato">
+            <div class="container">
+                <h2 class="titulo-secao">Contato</h2>
+                <p class="descricao-secao">Fique à vontade para me enviar uma mensagem ou me acompanhar nas redes.</p>
+
+                <div class="contato-wrapper">
+                    <form id="formulario-contato" class="formulario" novalidate>
+                        <div class="grupo-formulario">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome completo">
+                            <span class="erro-mensagem" id-erro="nome"></span>
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com">
+                            <span class="erro-mensagem" id-erro="email"></span>
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui (mínimo de 20 caracteres)..."></textarea>
+                            <span class="erro-mensagem" id-erro="mensagem"></span>
+                        </div>
+
+                        <div class="grupo-formulario-checkbox">
+                            <input type="checkbox" id="consentimento" name="consentimento">
+                            <label for="consentimento">Entendo que este formulário é um teste demonstrativo e não envia dados reais.</label>
+                            <span class="erro-mensagem" id-erro="consentimento"></span>
+                        </div>
+
+                        <button type="submit" class="botao-primario botao-enviar">Enviar mensagem</button>
+                        
+                        <p id="sucesso-envio" class="sucesso-mensagem" hidden>Sua mensagem foi validada com sucesso! (Demonstração)</p>
+                    </form>
+
+                    <div class="informacoes-contato">
+                        <h3>Redes Sociais</h3>
+                        <p>Você também pode me encontrar aqui:</p>
+                        <ul class="lista-redes">
+                            <li><a href="https://github.com/SEU-USUARIO" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                            <li><a href="https://linkedin.com/in/SEU-USUARIO" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="container rodape-container">
+            <p>&copy; <span id="ano-atual"></span> Kauã Ravi. Desenvolvido com HTML, CSS e JavaScript.</p>
+            <a href="#inicio" class="botao-topo" aria-label="Voltar ao início da página">↑ Voltar ao topo</a>
+        </div>
+    </footer>
+
+    <script src="../script.js" defer></script>
+</body>
+</html>
